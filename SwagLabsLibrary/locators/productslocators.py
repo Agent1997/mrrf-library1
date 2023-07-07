@@ -1,0 +1,1 @@
+PAGE_TITLE: str = "xpath://span[@class='title' and text()='Products']"
