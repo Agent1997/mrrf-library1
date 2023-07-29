@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 install_requires = []
 
-with open('requirements.txt', 'r', encoding='utf-16') as requirements_file:   
+with open('requirements.txt', 'r', encoding='utf-8') as requirements_file:   
     install_requires = requirements_file.readlines()
       
 setup(
