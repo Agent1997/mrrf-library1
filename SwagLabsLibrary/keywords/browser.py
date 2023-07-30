@@ -8,9 +8,10 @@ from SwagLabsLibrary.url import URLS
 
 class Browser:
     
-    def __init__(self, selib: SeleniumLibrary, env: str, is_headless: bool):
+    def __init__(self, selib: SeleniumLibrary, env: str, is_headless: bool, is_incognito: bool):
         self.__env = env
         self.__is_headless = is_headless
+        self.__is_incognito = is_incognito
         self.__wa = WebActions(ctx=selib, timeout=GLOBAL_SWAGLABS_TIMEOUT)
      
     @keyword(tags=("BrowserKeywords",))   
@@ -32,7 +33,7 @@ class Browser:
             raise Exception(f"No url configured for {self.__env} environment.")
         
         if browser == 'chrome':
-            options = chrome_options(is_headless=is_headless)
+            options = chrome_options(is_headless=is_headless, is_incognito=self.__is_incognito)
         else:
             raise Exception(f"{browser} is not supported.")
         

@@ -17,7 +17,7 @@ class SwagLabsLibrary(DynamicCore):
     NOTE: This is for demo purposes only! The construction of the keywords and the codes may be different in real projects and may be a little more complicated.
     """
     
-    def __init__(self, is_headless: bool = True, env: str = 'prod'):
+    def __init__(self, is_headless: bool = True, env: str = 'prod', is_incognito: bool = True):
         """Configuration whether to open browser in headless mode and on which environment to execute can be passed when importing the library.
 
             Arguments:
