@@ -1,7 +1,7 @@
 from SeleniumLibrary import SeleniumLibrary
 from robot.api.deco import library
 from robotlibcore import DynamicCore
-from SwagLabsLibrary.keywords import menu
+from SwagLabsLibrary.keywords.menu import Menu
 
 from SwagLabsLibrary.keywords.browser import Browser
 from SwagLabsLibrary.keywords.login import Login
@@ -31,7 +31,7 @@ class SwagLabsLibrary(DynamicCore):
         components = [
             Browser(selib=self.__selib, env=env, is_headless=is_headless),
             Login(selib=self.__selib),
-            menu(selib=self.__selib),
+            Menu(selib=self.__selib),
             Products(selib=self.__selib)
         ]
         DynamicCore.__init__(self, library_components=components)
