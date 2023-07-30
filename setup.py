@@ -28,5 +28,5 @@ setup(
     version='1.0.0',
     author='Agent 1997',
     packages=find_packages(exclude=['docs']),
-    install_requires=install_requires
+    dependency_links=install_requires
 )
