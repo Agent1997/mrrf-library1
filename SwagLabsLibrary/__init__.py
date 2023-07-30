@@ -29,7 +29,7 @@ class SwagLabsLibrary(DynamicCore):
         """
         self.__selib = SeleniumLibrary(screenshot_root_directory='EMBED')
         components = [
-            Browser(selib=self.__selib, env=env, is_headless=is_headless),
+            Browser(selib=self.__selib, env=env, is_headless=is_headless, is_incognito=is_incognito),
             Login(selib=self.__selib),
             Menu(selib=self.__selib),
             Products(selib=self.__selib)
